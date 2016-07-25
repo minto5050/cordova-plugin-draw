@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="in.co.geekninja.Draw"
+        version="0.7.0">
+
+  <name>Draw</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/Draw.js" target="js/Draw.js"/>
+
+  <js-module src="www/Draw.js" name="Draw">
+    <clobbers target="Draw" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Draw">
+        <param name="android-package" value="in.co.geekninja.plugin.Draw"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/Draw.java" target-dir="src/in/co/geekninja/plugin/"/>
+  </platform>
+</plugin>
