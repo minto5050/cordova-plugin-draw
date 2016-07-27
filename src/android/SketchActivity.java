@@ -19,8 +19,6 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 
-import in.co.geekninja.plugin.R;
-import in.co.geekninja.plugin.FingerDrawView;
 import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;

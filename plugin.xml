@@ -33,18 +33,10 @@
     <source-file src="src/android/SketchActivity.java" target-dir="src/in/co/geekninja/plugin/"/>
     <source-file src="src/android/res/layout/tool_box.xml" target-dir="res/layout/" />
     <source-file src="src/android/res/layout/activity_draw.xml" target-dir="res/layout/" />
-    <source-file src="src/android/res/drawable/checked.png" target-dir="/res/drawable-hdpi" />
-    <source-file src="src/android/res/drawable/cross_e.png" target-dir="/res/drawable-hdpi" />
-
-    <source-file src="src/android/res/drawable/checked.png" target-dir="/res/drawable-mdpi" />
-    <source-file src="src/android/res/drawable/cross_e.png" target-dir="/res/drawable-mdpi" />
-
-    <source-file src="src/android/res/drawable/checked.png" target-dir="/res/drawable-ldpi" />
-    <source-file src="src/android/res/drawable/cross_e.png" target-dir="/res/drawable-ldpi" />
-
-    <source-file src="src/android/res/drawable/checked.png" target-dir="/res/drawable-xhdpi" />
-    <source-file src="src/android/res/drawable/cross_e.png" target-dir="/res/drawable-xhdpi" />
+    <resource-file src="src/android/res/drawable/checked.png" target="res/drawable/checked.png" />
+    <resource-file src="src/android/res/drawable/cross_e.png" target="res/drawable/cross_e.png" />
     <framework src="src/android/draw.gradle" custom="true" type="gradleReference" />
     <resource-file src="libs/colorpicker-release.aar" target="libs/colorpicker-release.aar" />
+    <hook type="after_plugin_install" src="hooks/after_plugin_install/hook-add-r-import.js" />
   </platform>
 </plugin>

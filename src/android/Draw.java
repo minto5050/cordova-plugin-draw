@@ -1,9 +1,11 @@
 package in.co.geekninja.plugin;
 
+import android.content.Context;
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class Draw extends CordovaPlugin {
 
@@ -16,13 +18,16 @@ public class Draw extends CordovaPlugin {
             String message = "Hello, " + name;
             callbackContext.success(message);
             Context context=this.cordova.getActivity().getApplicationContext();
-            Toast.makeText(Context, "Toasting for the,"+message, Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Toasting for the,"+message, Toast.LENGTH_SHORT).show();
             return true;
 
-        } else {
+        } else if("draw".equals(action)){
+            Context context=this.cordova.getActivity().getApplicationContext();
+            context.startActivity(new Intent(context,SketchActivity.class));
+            return true;
 
-            return false;
-
+        }else{
+          return false;
         }
     }
 }
